@@ -1,1 +1,27 @@
-Empty placeholder!
+<section>
+  <h1>Challenge for RB</h1>
+  <p-table [value]="clientData">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Id</th>
+        <th>Avatar</th>
+        <th>First name</th>
+        <th>Last Name</th>
+        <th>Birth Date</th>
+        <th>Email</th>
+        <th>Contract</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-client>
+      <tr>
+        <td>{{client.id}}</td>
+        <td>{{client.avatar}}</td>
+        <td>{{client.firstName}}</td>
+        <td>{{client.lastName}}</td>
+        <td>{{client.birthDate}}</td>
+        <td>{{client.email}}</td>
+        <td>{{client.hasContract}}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</section>
