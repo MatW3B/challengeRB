@@ -1,4 +1,4 @@
-export interface usersResponse {
+export interface customerIF {
     firstName: string;
     lastName: string;
     birthDate: string;
