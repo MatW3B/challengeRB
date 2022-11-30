@@ -26,7 +26,7 @@
     <ng-template pTemplate="body" let-client>
       <tr [pSelectableRow]="client">
         <td><img class="client-avatar" src="{{client.avatar}}"></td>
-        <td>{{client.firstName}}</td>
+        <td>{{client.firstName}} {{selectedCustomer | sameMonth:client}}</td>
         <td>{{client.lastName}}</td>
         <td>{{client.hasContract ? 'Yes' : 'No'}}</td>
         <td>

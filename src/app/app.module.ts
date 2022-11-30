@@ -10,11 +10,13 @@ import { ButtonModule } from 'primeng/button';
 import { AppComponent } from './app.component';
 import { CustomerDetailsComponent } from './custom-components/customer-details/customer-details.component';
 import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
+import { SameMonthPipe } from './pipes/same-month.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerDetailsComponent
+    CustomerDetailsComponent,
+    SameMonthPipe
   ],
   imports: [
     BrowserModule,
