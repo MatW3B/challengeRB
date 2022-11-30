@@ -9,6 +9,11 @@
         <input pInputText type="text"
         (input)="dt.filterGlobal($event.target?.value, 'contains')"
         placeholder="First or last name" />
+
+        <button pButton (click)="refreshData()">
+          Refresh data
+        </button>
+
         <p-triStateCheckbox (onChange)="dt.filterGlobal($event.value, 'contains')"
           label="With contract">
         </p-triStateCheckbox>

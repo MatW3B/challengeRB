@@ -10,7 +10,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 - avatar fallback in case API fails
 - structurize imports better
-- handling of fetching the customer could be done in another service / interceptor
+- ~~handling of fetching the customer could be done in another service / interceptor~~ done!
 - console warnings or comments for devs, about things like pipe necessary args
+- toasts / dialogs for better UX
+- loading indicators on filtering / data fetching
+- general look and feel, layout - current state of the page is pretty much task-focused and uses basic styling.
 
 
