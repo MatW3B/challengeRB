@@ -10,4 +10,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 - avatar fallback in case API fails
 - structurize imports better
+- handling of fetching the customer could be done in another service / interceptor
+
 

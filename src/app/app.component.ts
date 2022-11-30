@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
 import { customerIF } from 'src/app/datamodel/users';
 
 
@@ -19,11 +20,20 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.getCustomersSub.subscribe({
-      next: (v) => {
-        this.clientData = v;
+    this.getCustomersSub.pipe(
+      map((customerArray: customerIF[]) => this.transformData(customerArray))
+    ).subscribe({
+      next: (customerArray) => {
+        this.clientData = customerArray;
       }
     });
+  }
+
+  transformData(customerData: customerIF[]): customerIF[] {
+    customerData.map((customer) => {
+      customer.birthDate = new Date(customer.birthDate);
+    });
+    return customerData;
   }
 
   onRowSelect($event: any) {
