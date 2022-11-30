@@ -1,6 +1,9 @@
 <p-dialog [(visible)]="customer" [modal]="true" [style]="{'min-width': '30rem'}"
     [header]="'Customer Details'">
     <div>
+        <b>ID: </b> <span>{{customer?.id}}</span>
+    </div>
+    <div>
         <b>Birth date: </b> <span>{{customer?.birthDate}}</span>
     </div>
     <div>
